@@ -17,6 +17,7 @@ const jobTypes = ["Full-Time", "Part-Time", "Contractor"];
 const Welcome = () => {
   const router = useRouter();
   const [activeJobType, setActiveJobType] = useState("Full-Time");
+  
   return (
     <View>
       <View style={styles.container}>
@@ -56,6 +57,7 @@ const Welcome = () => {
           )}
           keyExtractor={(item) => item}
           contentContainerStyle={{ columnGap: SIZES.small }}
+          nestedScrollEnabled
           horizontal
         />
       </View>

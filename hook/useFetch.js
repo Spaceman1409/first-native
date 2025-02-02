@@ -9,18 +9,11 @@ const useFetch = (endpoint, query) => {
   const options = {
     method: "GET",
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
+    params: { ...query },
     headers: {
-      "x-rapidapi-key": process.env.RAPID_API_KEY,
+      "x-rapidapi-key": 'dc1d617a26msh84a7574b97c89d7p19578ejsn99f70013c01b',
       "x-rapidapi-host": "jsearch.p.rapidapi.com",
     },
-    params: { ...query },
-    // params: {
-    //   query: "developer jobs in chicago",
-    //   page: "1",
-    //   num_pages: "1",
-    //   country: "us",
-    //   date_posted: "all",
-    // },
   };
 
   const fetchData = async () => {
